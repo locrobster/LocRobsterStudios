@@ -107,7 +107,7 @@ body > .banner.cropped {
   backdrop-filter: blur(12px) saturate(150%);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 15px;
-  color: #000;
+  color: #f0e6ff;
   text-decoration: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   font-size: 16px;
@@ -244,6 +244,8 @@ body > .banner.cropped {
     margin-top: var(--section-vertical-gap);
     margin-bottom: var(--section-vertical-gap);
     padding: 20px;
+    background-size: cover !important;
+    background-position: center center !important;
   }
 }
 
@@ -340,6 +342,7 @@ body > .banner.cropped {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   border-radius: inherit;
   transition: transform 0.6s ease;
 }
@@ -358,7 +361,7 @@ body > .banner.cropped {
 .gallery-grid-shop {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: calc(var(--gallery-gap) * 1.2);
+  gap: var(--gallery-gap);
   padding: 0;
   margin: 0;
   width: 100%;
@@ -384,6 +387,7 @@ body > .banner.cropped {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   border-radius: inherit;
   transition: transform 0.6s ease;
 }
@@ -448,7 +452,7 @@ body > .banner.cropped {
 }
 
 .about-layered-text {
-  color: #000;
+  color: #f0e6ff;
   font-size: 0.95rem;
   line-height: 1.5;
   text-align: center;
@@ -460,7 +464,7 @@ body > .banner.cropped {
 }
 
 .about-layered-text-shop {
-  color: #000;
+  color: #f0e6ff;
   font-size: 0.95rem;
   line-height: 1.4;
   text-align: center;
@@ -483,7 +487,7 @@ body > .banner.cropped {
 }
 
 .about-layered-text-gallery {
-  color: #000;
+  color: #f0e6ff;
   font-size: 0.95rem;
   line-height: 1.4;
   text-align: center;
@@ -502,7 +506,7 @@ body > .banner.cropped {
 }
 
 .about-layered-text-shop-intro {
-  color: #000;
+  color: #f0e6ff;
   font-size: 0.95rem;
   line-height: 1.4;
   text-align: center;
