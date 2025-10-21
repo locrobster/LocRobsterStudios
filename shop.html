@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LocRobster Studios — Shop</title>
+  <!-- <link rel="icon" type="image/png" href="graphics/favicon.png" /> -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css?v=20251019-01" />
+  <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="subpage">
+  <!-- Banner -->
+<div class="banner cropped">
+  <img src="graphics/mainbanner.png" alt="Main Banner">
+  <img src="graphics/bannerlogo.png" alt="LocRobster Studios Logo">
+</div>
+
+  <!-- Navigation Buttons -->
+  <div class="button-container">
+    <a href="shop.html" class="frosted-btn active" aria-current="page">Wearing Pleasure</a>
+    <a href="index.html" class="frosted-btn home-btn"><i data-lucide="home"></i></a>
+    <a href="gallery.html" class="frosted-btn">Viewing Pleasure</a>
+  </div>
+
+  <!-- Shop Content -->
+  <section class="about-layered-section">
+    <div class="about-layered-base">
+      <div class="about-layered-accent">
+        <div class="about-layered-text-shop">
+          <p><strong>Ready to add some LocRobster magic to your life?</strong></p>
+          <p>Check out my shop hosted by Printify.
+            <button class="info-btn" onclick="toggleShopInfo()" title="Shop Information">
+              <i class="fas fa-info-circle"></i>
+            </button>
+          </p>
+          
+          <div id="shop-info" class="shop-info-details" style="display: none;">
+            <div class="info-content">
+              <h4>Why Shop Through Printify?</h4>
+              <ul>
+                <li><strong>Secure & Trusted:</strong> Professional e-commerce platform used by thousands of artists worldwide</li>
+                <li><strong>Safe Payments:</strong> All transactions protected with industry-standard security encryption</li>
+                <li><strong>Quality Fulfillment:</strong> High-quality printing and reliable shipping handled professionally</li>
+                <li><strong>Customer Support:</strong> Dedicated support team available for any order questions or issues</li>
+                <li><strong>Easy Returns:</strong> Hassle-free return process managed by Printify's customer service</li>
+              </ul>
+            </div>
+          </div>
+
+          <div style="text-align:center;">
+            <a href="https://locrobsterstudios.printify.me/" target="_blank" class="frosted-btn">
+              Shop Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop Gallery Section -->
+  <section class="index-featured-gallery gallery-wrap">
+    <div class="gallery-grid-shop"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="socials">
+      <a href="https://www.tiktok.com/@locrobster" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.instagram.com/locrobster_studios" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@LocRobster" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://x.com/locrobster" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.twitch.tv/locrobster" target="_blank"><i class="fab fa-twitch"></i></a>
+    </div>
+    <div class="copyright">© 2025 LocRobster Studios. All Rights Reserved.</div>
+  </footer>
+
+  <script>
+  function toggleShopInfo() {
+    const infoDiv = document.getElementById('shop-info');
+    if (infoDiv.style.display === 'none' || infoDiv.style.display === '') {
+      infoDiv.style.display = 'block';
+    } else {
+      infoDiv.style.display = 'none';
+    }
+  }
+  </script>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="script.js?v=20251013-01"></script>
+  <script>lucide.createIcons();</script>
+
+  <script type="module">
+  import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.js';
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '.gallery-grid-shop',
+    children: 'a',
+    pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.js')
+  });
+  lightbox.init();
+</script>
+</body>
+</html>

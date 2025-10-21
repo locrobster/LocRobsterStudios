@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LocRobster Studios — Gallery</title>
+  <!-- <link rel="icon" type="image/png" href="graphics/favicon.png" /> -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css?v=20251019-01" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css" />
+</head>
+
+<body class="subpage">
+  <!-- Banner -->
+  <div class="banner cropped">
+    <img src="graphics/mainbanner.png" alt="Main Banner">
+    <img src="graphics/bannerlogo.png" alt="LocRobster Studios Logo">
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="button-container">
+    <a href="shop.html" class="frosted-btn">Wearing Pleasure</a>
+    <a href="index.html" class="frosted-btn home-btn"><i data-lucide="home"></i></a>
+    <a href="gallery.html" class="frosted-btn active" aria-current="page">Viewing Pleasure</a>
+  </div>
+
+  <!-- Full Gallery Section (use same container style as index page) -->
+  <section class="index-featured-gallery gallery-wrap">
+    <div class="gallery-grid-full"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="socials">
+      <a href="https://www.tiktok.com/@locrobster" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.instagram.com/locrobster_studios" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@LocRobster" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://x.com/locrobster" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.twitch.tv/locrobster" target="_blank"><i class="fab fa-twitch"></i></a>
+    </div>
+    <div class="copyright">© 2025 LocRobster Studios. All Rights Reserved.</div>
+  </footer>
+
+  <script src="script.js?v=20251013-01"></script>
+  <script>lucide.createIcons();</script>
+
+  <!-- Swipe-to-close support -->
+
+  <!-- Defensive: remove any leftover dev guide artifacts (in case of cached HTML/CSS) -->
+  <script>
+    (function(){
+      try {
+        document.documentElement.classList.remove('show-guides');
+        document.body.classList.remove('show-guides');
+        var t = document.getElementById('toggleGuides'); if (t) t.remove();
+        document.querySelectorAll('.dev-toggle').forEach(function(el){ el.remove(); });
+        // Force stylesheet to latest version (cache-bust) if not already
+        document.querySelectorAll('link[rel="stylesheet"]').forEach(function(link){
+          if (link.href && link.href.indexOf('style.css') !== -1) {
+            var newHref = 'style.css?v=20251013-01';
+            if (link.href.indexOf('20251013-01') === -1) link.href = newHref;
+          }
+        });
+      } catch(e) { /* swallow errors */ }
+    })();
+  </script>
+  <script>
+    (function() {
+      const lightbox = document.getElementById("lightbox");
+      let touchStartY = 0;
+      lightbox.addEventListener("touchstart", (e) => { touchStartY = e.touches[0].clientY; });
+      lightbox.addEventListener("touchend", (e) => {
+        const touchEndY = e.changedTouches[0].clientY;
+        const distance = touchStartY - touchEndY;
+        if (distance > 100 && typeof closeLightbox === "function") closeLightbox();
+      });
+    })();
+  </script>
+  
+
+  <script type="module">
+  import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.js';
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '.gallery-grid-full, .gallery-grid',
+    children: 'a',
+    pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.js')
+  });
+  lightbox.init();
+</script>
+</body>
+</html>
