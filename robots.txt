@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://locrobsterstudios.com/sitemap.xml
+
+# Allow all robots to access all content
+# Block access to any admin or private areas (none currently)
