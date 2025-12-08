@@ -11,7 +11,7 @@
   --text: #f7f8fb;
   --gallery-padding: 15px;
   --gallery-gap: 12px;
-  --section-vertical-gap: 20px; /* Reduced spacing */
+  --section-vertical-gap: 20px; /* Reduced spacing to match nav-to-launch spacing */
   --page-side-space: clamp(8px, 2vw, 20px); /* Reduced margins */
 }
 
