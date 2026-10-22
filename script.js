@@ -33,7 +33,8 @@
       const img = new Image();
       img.loading = 'lazy';
       img.decoding = 'async';
-      img.alt = `Art ${i}`;
+      img.alt = `LocRobster Studios original digital artwork ${i}`;
+      img.title = `LocRobster Studios original digital artwork ${i}`;
       img.src = srcThumb;
 
       a.appendChild(img);
@@ -95,7 +96,9 @@
       const img = new Image();
       img.loading = 'lazy';
       img.decoding = 'async';
-      img.alt = `${folder} ${i}`;
+      const label = folder === 'robbie' ? 'Robbie portrait photography' : 'Parker portrait photography';
+      img.alt = `LocRobster Studios ${label} ${i}`;
+      img.title = `LocRobster Studios ${label} ${i}`;
       img.src = srcThumb;
 
       a.appendChild(img);
